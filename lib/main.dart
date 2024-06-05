@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:vn_rust_hackathon/GUI/GUIComponents/gui_navigation_bar.dart';
+import 'package:vn_rust_hackathon/GUI/GUIHistory/gui_history_notifier.dart';
 import 'package:vn_rust_hackathon/GUI/gui_metamask_login_screen.dart';
 
 void main() {
@@ -35,10 +37,10 @@ class MyApp extends StatelessWidget {
         ),
         // home: const MyHomePage(title: 'Flutter Demo Home Page'),
         home: Scaffold(
-          body: Container(
-            decoration: BoxDecoration(color: Colors.white),
+          bottomNavigationBar: ChangeNotifierProvider(
+            create: (context) => HistoryModel(),
+            child: GUINavigationBar(0),
           ),
-          bottomNavigationBar: GUINavigationBar(0),
         ));
   }
 }

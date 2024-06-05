@@ -1,9 +1,13 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/scheduler/ticker.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:motion_tab_bar/MotionBadgeWidget.dart';
 import 'package:motion_tab_bar/MotionTabBar.dart';
 import 'package:motion_tab_bar/MotionTabBarController.dart';
+import 'package:provider/provider.dart';
+import 'package:vn_rust_hackathon/GUI/GUIHistory/gui_history.dart';
+import 'package:vn_rust_hackathon/GUI/GUIHistory/gui_history_notifier.dart';
 
 class CustomIcons {
   static const _kFontFam = 'CustomIcons';
@@ -23,14 +27,11 @@ class GUINavigationBar extends StatefulWidget {
   late List<IconData> iconList;
   late int currentTab = 2;
   @override
-  State<StatefulWidget> createState() =>
-      NavigationBarState(iconList, currentTab);
+  State<StatefulWidget> createState() => NavigationBarState();
 }
 
 class NavigationBarState extends State<GUINavigationBar>
     with TickerProviderStateMixin {
-  List<IconData> _iconPath;
-  int _currentIndex;
   MotionTabBarController? _motionTabBarController;
   @override
   void initState() {
@@ -56,13 +57,16 @@ class NavigationBarState extends State<GUINavigationBar>
     _motionTabBarController!.dispose();
   }
 
-  NavigationBarState(this._iconPath, this._currentIndex);
+  NavigationBarState();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: MotionTabBar(
-        tabBarColor: Colors.white,
-        tabIconSelectedColor: Colors.white,
+        tabSelectedColor: Colors.black,
+
+        tabIconColor: Colors.black,
+        tabBarColor: Colors.white70,
+        tabIconSelectedColor: Colors.amber,
         controller: _motionTabBarController,
         initialSelectedTab: 'Dashboard',
         textStyle: TextStyle(color: Colors.transparent),
@@ -129,8 +133,9 @@ class NavigationBarState extends State<GUINavigationBar>
               title: "Profile Page", controller: _motionTabBarController!),
           MainPageContentComponent(
               title: "Settings Page", controller: _motionTabBarController!),
-          MainPageContentComponent(
-              title: "Settings Page2", controller: _motionTabBarController!),
+          GUIHistory(
+            motionTabBarController: _motionTabBarController!,
+          ),
         ],
       ),
     );
