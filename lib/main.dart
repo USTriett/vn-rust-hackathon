@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:provider/provider.dart';
+
+import 'package:vn_rust_hackathon/GUI/gui_dashboard.dart';
+
 import 'package:vn_rust_hackathon/GUI/GUIComponents/gui_navigation_bar.dart';
 import 'package:vn_rust_hackathon/GUI/GUIHistory/gui_history_notifier.dart';
 import 'package:vn_rust_hackathon/GUI/gui_metamask_login_screen.dart';

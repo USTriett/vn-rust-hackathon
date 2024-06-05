@@ -33,6 +33,8 @@ dependencies:
   web3dart: ^2.3.5
   walletconnect_dart: ^0.0.11
   url_launcher: ^6.3.0
+  tab_container: ^3.5.3
+  infinite_carousel: ^1.0.3
 
 
   # The following adds the Cupertino Icons font to your application.
