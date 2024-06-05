@@ -24,7 +24,8 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.thirtytwo.vn_rust_hackathon"
-    compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 34
+    // compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
     compileOptions {
