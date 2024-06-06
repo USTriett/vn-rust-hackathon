@@ -12,78 +12,152 @@ class HistoryItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Card(
-        color: Color.fromARGB(50, 135, 135, 231),
+        color: Color.fromARGB(40, 135, 135, 231),
         child: Padding(
-          padding: const EdgeInsets.all(30.0),
+          padding: const EdgeInsets.all(15.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // deposite 2 --- deposite & USD
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
+                    // deposite (name)
                     item.name,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 22),
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 135, 135, 231),
+                      // Color.fromARGB(255, 255, 255, 255),
+                    ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 30, 0, 10),
-                    child: Column(
+                  Container(
+                    padding: EdgeInsets.all(7),
+                    decoration: BoxDecoration(
+                        color: Color.fromARGB(50, 255, 255, 255),
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Text(
+                      // deposite / withdraw
+                      '${item.type}',
+                      style: TextStyle(
+                        color: (item.type == "deposit"
+                            ? Color.fromARGB(255, 74, 175, 74)
+                            : Color.fromARGB(255, 175, 74, 74)),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              // token ~ USD
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Row(
                       children: [
-                        Text('${item.type}',
-                            style: const TextStyle(
-                                color: Colors.grey,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18)),
+                        Icon(
+                          Icons.generating_tokens,
+                          color: Color.fromARGB(255, 228, 118, 14),
+                          size: 22.0,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
                         Text(
-                          '\$${item.cash.toString()}',
+                          '${item.token.toString()}',
                           style: const TextStyle(
-                              color: Colors.grey,
                               fontWeight: FontWeight.bold,
-                              fontSize: 18),
+                              color: Colors.amber,
+                              fontSize: 20),
                         ),
                       ],
+                    ),
+                    Text(
+                      "~",
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(150, 200, 200, 200),
+                        fontSize: 20,
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.attach_money,
+                          color: Color.fromARGB(255, 228, 118, 14),
+                          size: 22.0,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          '${item.cash.toString()}',
+                          style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.amber,
+                              fontSize: 20),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                // mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    'Balance: \$${item.balance.toString()}',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 255, 255, 255),
                     ),
                   ),
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    ': ${item.token.toString()}',
+                    'Start Time:',
                     style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.amber,
-                        fontSize: 20),
+                        // fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(150, 200, 200, 200),
+                        fontSize: 12),
+                  ),
+                  Text(
+                    item.startTime.toIso8601String(),
+                    style: const TextStyle(
+                        // fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(150, 200, 200, 200),
+                        fontSize: 12),
                   ),
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Balance: \$${item.balance.toString()}',
+                    'End Time:',
                     style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.amber,
-                        fontSize: 20),
+                      // fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(150, 200, 200, 200),
+                      fontSize: 12,
+                    ),
+                  ),
+                  Text(
+                    item.endTime.toIso8601String(),
+                    style: const TextStyle(
+                      // fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(150, 200, 200, 200),
+                      fontSize: 12,
+                    ),
                   ),
                 ],
-              ),
-              Text(
-                'Start Time: ${item.startTime.toIso8601String()}',
-                style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey,
-                    fontSize: 18),
-              ),
-              Text(
-                'End Time: ${item.endTime.toIso8601String()}',
-                style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey,
-                    fontSize: 18),
               ),
             ],
           ),

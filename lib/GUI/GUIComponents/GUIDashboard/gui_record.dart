@@ -47,9 +47,10 @@ class _GUIDashboardRecordState extends State<GUIDashboardRecord> {
                           Text(
                             BSDashboard.GetCoinType(index, tab),
                             style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromARGB(255, 255, 255, 255)),
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 255, 255, 255),
+                            ),
                           ),
                           Text(
                             BSDashboard.GetTag(index, tab),
