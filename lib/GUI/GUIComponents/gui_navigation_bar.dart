@@ -8,6 +8,7 @@ import 'package:motion_tab_bar/MotionTabBarController.dart';
 import 'package:vn_rust_hackathon/GUI/GUIHistory/gui_history.dart';
 
 import 'package:vn_rust_hackathon/GUI/gui_dashboard.dart';
+import 'package:vn_rust_hackathon/GUI/gui_metamask_login_screen.dart';
 
 class CustomIcons {
   static const _kFontFam = 'CustomIcons';
@@ -125,8 +126,8 @@ class NavigationBarState extends State<GUINavigationBar>
             const NeverScrollableScrollPhysics(), // swipe navigation handling is not supported
         controller: _motionTabBarController,
         children: <Widget>[
-          MainPageContentComponent(
-              title: "Home Page", controller: _motionTabBarController!),
+          GUIMatamaskScreen(
+              title: "Account Page", controller: _motionTabBarController!),
           MainPageContentComponent(
               title: "Profile Page", controller: _motionTabBarController!),
           GUIDashboard(
