@@ -9,28 +9,84 @@ class HistoryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Colors.deepPurple,
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              item.name,
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-            ),
-            Text(
-              '\$${item.cash.toString()}',
-              style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
-            ),
-            Text('Token: ${item.token.toString()}'),
-            Text('Type: ${item.type}'),
-            Text('Start Time: ${item.startTime.toIso8601String()}'),
-            Text('End Time: ${item.endTime.toIso8601String()}'),
-            Text('Balance: \$${item.balance.toString()}'),
-          ],
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Card(
+        color: Color.fromARGB(50, 135, 135, 231),
+        child: Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    item.name,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 22),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 30, 0, 10),
+                    child: Column(
+                      children: [
+                        Text('${item.type}',
+                            style: const TextStyle(
+                                color: Colors.grey,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18)),
+                        Text(
+                          '\$${item.cash.toString()}',
+                          style: const TextStyle(
+                              color: Colors.grey,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Text(
+                    ': ${item.token.toString()}',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.amber,
+                        fontSize: 20),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Balance: \$${item.balance.toString()}',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.amber,
+                        fontSize: 20),
+                  ),
+                ],
+              ),
+              Text(
+                'Start Time: ${item.startTime.toIso8601String()}',
+                style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey,
+                    fontSize: 18),
+              ),
+              Text(
+                'End Time: ${item.endTime.toIso8601String()}',
+                style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey,
+                    fontSize: 18),
+              ),
+            ],
+          ),
         ),
       ),
     );
