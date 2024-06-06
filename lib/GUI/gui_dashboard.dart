@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:infinite_carousel/infinite_carousel.dart';
 import 'package:motion_tab_bar/MotionTabBarController.dart';
+import 'package:provider/provider.dart';
 import 'package:tab_container/tab_container.dart';
 import 'package:vn_rust_hackathon/Business/business_dashboard.dart';
+import 'package:vn_rust_hackathon/GUI/GUIComponents/GUIDashboard/gui_dashboard_notifier.dart';
 import 'package:vn_rust_hackathon/GUI/GUIComponents/GUIDashboard/gui_record.dart';
 
 class GUIDashboard extends StatefulWidget {
@@ -55,6 +57,12 @@ class _GUIDashboardState extends State<GUIDashboard>
 
   @override
   Widget build(BuildContext context) {
+    AllCoinModel allModel = Provider.of<AllCoinModel>(context);
+    HotCoinModel hotModel = Provider.of<HotCoinModel>(context);
+    NewCoinModel newModel = Provider.of<NewCoinModel>(context);
+    allModel.fetchAllData();
+    hotModel.fetchHotData();
+    newModel.fetchNewData();
     // TODO: implement build
     return Scaffold(
       backgroundColor: Colors.black,
@@ -70,7 +78,7 @@ class _GUIDashboardState extends State<GUIDashboard>
             tabMaxLength: 100,
             borderRadius: BorderRadius.circular(10),
             tabBorderRadius: BorderRadius.circular(10),
-            childPadding: const EdgeInsets.all(20.0),
+            childPadding: const EdgeInsets.fromLTRB(12, 20, 12, 20),
             selectedTextStyle: const TextStyle(
               color: Color.fromARGB(255, 255, 0, 0),
               fontSize: 15.0,
@@ -86,44 +94,51 @@ class _GUIDashboardState extends State<GUIDashboard>
               Color.fromARGB(50, 135, 231, 135),
             ],
             tabs: [
-              Text(BusinessDashboard.GetHeader(0)),
-              Text(BusinessDashboard.GetHeader(1)),
-              Text(BusinessDashboard.GetHeader(2)),
+              Text(BSDashboard.GetHeader(0)),
+              Text(BSDashboard.GetHeader(1)),
+              Text(BSDashboard.GetHeader(2)),
             ],
             children: [
               // All
-              ListView.builder(
-                // padding: const EdgeInsets.all(5),
-                itemCount: BusinessDashboard.GetNumberRecord(0),
-                itemBuilder: (BuildContext context, int index) {
-                  return GUIDashboardRecord(
-                    index: index,
-                    tab: 0,
-                  );
-                },
-              ),
+              Consumer<AllCoinModel>(builder: (context, allModel, child) {
+                return ListView.builder(
+                  // padding: const EdgeInsets.all(5),
+                  itemCount: BSDashboard.GetNumberRecord(0),
+                  itemBuilder: (BuildContext context, int index) {
+                    return GUIDashboardRecord(
+                      index: index,
+                      tab: 0,
+                    );
+                  },
+                );
+              }),
+
               // Hot
-              ListView.builder(
-                // padding: const EdgeInsets.all(5),
-                itemCount: BusinessDashboard.GetNumberRecord(0),
-                itemBuilder: (BuildContext context, int index) {
-                  return GUIDashboardRecord(
-                    index: index,
-                    tab: 1,
-                  );
-                },
-              ),
+              Consumer<HotCoinModel>(builder: (context, hotModel, child) {
+                return ListView.builder(
+                  // padding: const EdgeInsets.all(5),
+                  itemCount: BSDashboard.GetNumberRecord(1),
+                  itemBuilder: (BuildContext context, int index) {
+                    return GUIDashboardRecord(
+                      index: index,
+                      tab: 1,
+                    );
+                  },
+                );
+              }),
               // New
-              ListView.builder(
-                // padding: const EdgeInsets.all(5),
-                itemCount: BusinessDashboard.GetNumberRecord(0),
-                itemBuilder: (BuildContext context, int index) {
-                  return GUIDashboardRecord(
-                    index: index,
-                    tab: 2,
-                  );
-                },
-              ),
+              Consumer<NewCoinModel>(builder: (context, newModel, child) {
+                return ListView.builder(
+                  // padding: const EdgeInsets.all(5),
+                  itemCount: BSDashboard.GetNumberRecord(2),
+                  itemBuilder: (BuildContext context, int index) {
+                    return GUIDashboardRecord(
+                      index: index,
+                      tab: 2,
+                    );
+                  },
+                );
+              }),
             ],
           ),
         ),

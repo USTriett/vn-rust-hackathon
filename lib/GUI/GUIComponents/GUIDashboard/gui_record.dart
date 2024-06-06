@@ -24,7 +24,7 @@ class _GUIDashboardRecordState extends State<GUIDashboardRecord> {
     return Container(
       alignment: Alignment.center,
       margin: EdgeInsets.only(top: 10),
-      height: 70,
+      height: 80,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: Color.fromARGB(50, 0, 0, 0),
@@ -45,14 +45,14 @@ class _GUIDashboardRecordState extends State<GUIDashboardRecord> {
                       Row(
                         children: [
                           Text(
-                            BusinessDashboard.GetCoinType(index, tab),
+                            BSDashboard.GetCoinType(index, tab),
                             style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                                 color: Color.fromARGB(255, 255, 255, 255)),
                           ),
                           Text(
-                            BusinessDashboard.GetTag(index, tab),
+                            BSDashboard.GetTag(index, tab),
                             style: TextStyle(
                               fontSize: 10,
                               fontWeight: FontWeight.bold,
@@ -62,7 +62,7 @@ class _GUIDashboardRecordState extends State<GUIDashboardRecord> {
                         ],
                       ),
                       Text(
-                        BusinessDashboard.GetAmountUSDT(index, tab),
+                        BSDashboard.GetAmountUSDT(index, tab),
                         style: TextStyle(
                           fontSize: 12,
                           color: Color.fromARGB(150, 200, 200, 200),
@@ -84,7 +84,7 @@ class _GUIDashboardRecordState extends State<GUIDashboardRecord> {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Text(
-                        BusinessDashboard.GetAmountUSD(index, tab),
+                        BSDashboard.GetAmountUSD(index, tab),
                         style: TextStyle(
                           fontSize: 15,
                           // fontWeight: FontWeight.bold,
@@ -92,7 +92,7 @@ class _GUIDashboardRecordState extends State<GUIDashboardRecord> {
                         ),
                       ),
                       Text(
-                        BusinessDashboard.GetAmountUSD(index, tab),
+                        BSDashboard.GetAmountUSD(index, tab),
                         style: TextStyle(
                           fontSize: 12,
                           color: Color.fromARGB(150, 200, 200, 200),
@@ -124,7 +124,7 @@ class _GUIDashboardRecordState extends State<GUIDashboardRecord> {
                         ),
                       ),
                       backgroundColor: MaterialStateProperty.all(
-                        (BusinessDashboard.GetDerivativePercent(index, tab) > 0
+                        (BSDashboard.GetDerivativePercent(index, tab) > 0
                             ? Color.fromARGB(255, 74, 175, 74)
                             : Color.fromARGB(255, 175, 74, 74)),
                       ),
@@ -133,8 +133,7 @@ class _GUIDashboardRecordState extends State<GUIDashboardRecord> {
                       ),
                     ),
                     child: Text(
-                      BusinessDashboard.GetDerivativePercent(index, tab)
-                              .toString() +
+                      BSDashboard.GetDerivativePercent(index, tab).toString() +
                           "%",
                       style: TextStyle(
                         fontSize: 15,

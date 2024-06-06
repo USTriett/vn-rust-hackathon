@@ -33,6 +33,7 @@ class GUINavigationBar extends StatefulWidget {
 class NavigationBarState extends State<GUINavigationBar>
     with TickerProviderStateMixin {
   MotionTabBarController? _motionTabBarController;
+
   @override
   void initState() {
     super.initState();
