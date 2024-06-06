@@ -4,6 +4,7 @@ import 'package:flutter/src/scheduler/ticker.dart';
 import 'package:motion_tab_bar/MotionBadgeWidget.dart';
 import 'package:motion_tab_bar/MotionTabBar.dart';
 import 'package:motion_tab_bar/MotionTabBarController.dart';
+import 'package:vn_rust_hackathon/GUI/gui_dashboard.dart';
 
 class CustomIcons {
   static const _kFontFam = 'CustomIcons';
@@ -45,7 +46,7 @@ class NavigationBarState extends State<GUINavigationBar>
 
     //// use "MotionTabBarController" to replace with "TabController", if you need to programmatically change the tab
     _motionTabBarController =
-        MotionTabBarController(initialIndex: 0, length: 5, vsync: this);
+        MotionTabBarController(initialIndex: 2, length: 5, vsync: this);
   }
 
   @override
@@ -122,11 +123,11 @@ class NavigationBarState extends State<GUINavigationBar>
         controller: _motionTabBarController,
         children: <Widget>[
           MainPageContentComponent(
-              title: "Dashboard Page", controller: _motionTabBarController!),
-          MainPageContentComponent(
               title: "Home Page", controller: _motionTabBarController!),
           MainPageContentComponent(
               title: "Profile Page", controller: _motionTabBarController!),
+          GUIDashboard(
+              title: "Dashboard Page", controller: _motionTabBarController!),
           MainPageContentComponent(
               title: "Settings Page", controller: _motionTabBarController!),
           MainPageContentComponent(
