@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:vn_rust_hackathon/Business/business_dashboard.dart';
@@ -27,51 +29,55 @@ class _GUIDashboardRecordState extends State<GUIDashboardRecord> {
       height: 80,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: Color.fromARGB(50, 0, 0, 0),
+        color: Color.fromARGB(100, 0, 0, 0),
       ),
       child: Center(
         child: Container(
+          padding: EdgeInsets.all(5),
           child: Row(
             children: [
               // name, tag and USDT
               Expanded(
                 flex: 7,
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            BSDashboard.GetCoinType(index, tab),
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 255, 255, 255),
-                            ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          BSDashboard.GetCoinType(index, tab).substring(
+                              0,
+                              min(10,
+                                  BSDashboard.GetCoinType(index, tab).length)),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            // overflow: TextOverflow.clip,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(255, 255, 255, 255),
                           ),
-                          Text(
-                            BSDashboard.GetTag(index, tab),
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(146, 245, 186, 99),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Text(
-                        BSDashboard.GetAmountUSDT(index, tab),
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Color.fromARGB(150, 200, 200, 200),
-                          // fontWeight: FontWeight.bold,
                         ),
+                        Text(
+                          BSDashboard.GetTag(index, tab),
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(146, 245, 186, 99),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Text(
+                      BSDashboard.GetAmountUSDT(index, tab),
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Color.fromARGB(150, 200, 200, 200),
+                        // fontWeight: FontWeight.bold,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
 

@@ -42,7 +42,7 @@ String jsonDashboardData = '''
   {
     "coinType": "1000PRPRISDT",
     "amountUSDT": "523.133M USDT",
-    "amountUSD": "0.0143103 USD",
+    "amountUSD": "0.014310 USD",
     "derivativePercent": -0.57,
     "tag": "hot"
   },

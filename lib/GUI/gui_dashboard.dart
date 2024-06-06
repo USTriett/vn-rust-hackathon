@@ -79,7 +79,7 @@ class _GUIDashboardState extends State<GUIDashboard>
             tabMaxLength: 100,
             borderRadius: BorderRadius.circular(10),
             tabBorderRadius: BorderRadius.circular(10),
-            childPadding: const EdgeInsets.fromLTRB(12, 20, 12, 20),
+            childPadding: const EdgeInsets.fromLTRB(12, 0, 12, 20),
             selectedTextStyle: const TextStyle(
               color: Color.fromARGB(255, 255, 0, 0),
               fontSize: 15.0,
