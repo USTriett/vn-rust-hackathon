@@ -1,0 +1,470 @@
+{
+  "assets": [
+    {
+      "assetId": 1,
+      "symbol": "BTC",
+      "decimals": 8,
+      "displayDecimals": 5,
+      "settles": true,
+      "assetType": "Crypto",
+      "sourceId": 1,
+      "metadata": {
+        "currencyName": "Bitcoin",
+        "dustAmount": 3000,
+        "marketCapRank": 1,
+        "snapshotPrice": 65814,
+        "supply": 19672262,
+        "totalSupply": 21000000
+      },
+      "status": 1
+    },
+    {
+      "assetId": 2,
+      "symbol": "ETH",
+      "decimals": 18,
+      "displayDecimals": 3,
+      "settles": true,
+      "assetType": "Crypto",
+      "sourceId": 2,
+      "metadata": {
+        "currencyName": "Ethereum",
+        "dustAmount": 500000000000000,
+        "marketCapRank": 2,
+        "snapshotPrice": 3320.6,
+        "supply": 120069288.450637,
+        "totalSupply": 120069288.450637
+      },
+      "status": 1
+    },
+    {
+      "assetId": 5,
+      "symbol": "SOL",
+      "decimals": 9,
+      "displayDecimals": 2,
+      "settles": true,
+      "assetType": "Crypto",
+      "sourceId": 3,
+      "metadata": {
+        "currencyName": "Solana",
+        "marketCapRank": 5,
+        "snapshotPrice": 188.25,
+        "supply": 444818407.824076,
+        "totalSupply": 573200373.590041
+      },
+      "status": 1
+    },
+    {
+      "assetId": 6,
+      "symbol": "USDT",
+      "decimals": 6,
+      "displayDecimals": 2,
+      "settles": true,
+      "assetType": "Crypto",
+      "sourceId": 3,
+      "metadata": {
+        "currencyName": "Tether",
+        "marketCapRank": 3,
+        "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+        "snapshotPrice": 0.999415,
+        "supply": 105280728305.684,
+        "totalSupply": 105280728305.684
+      },
+      "status": 1
+    },
+    {
+      "assetId": 7,
+      "symbol": "USDC",
+      "decimals": 6,
+      "displayDecimals": 2,
+      "settles": true,
+      "assetType": "Crypto",
+      "sourceId": 3,
+      "metadata": {
+        "currencyName": "USD Coin",
+        "marketCapRank": 6,
+        "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "snapshotPrice": 0.999092,
+        "supply": 32916477604.7047,
+        "totalSupply": 32954990224.5619
+      },
+      "status": 1
+    },
+    {
+      "assetId": 8,
+      "symbol": "BONK",
+      "decimals": 5,
+      "displayDecimals": 0,
+      "settles": true,
+      "assetType": "Crypto",
+      "sourceId": 3,
+      "metadata": {
+        "currencyName": "Bonk",
+        "marketCapRank": 77,
+        "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "snapshotPrice": 2.313e-5,
+        "supply": 66005979466532.67,
+        "totalSupply": "93412427212981.39"
+      },
+      "status": 1
+    },
+    {
+      "assetId": 9,
+      "symbol": "RENDER",
+      "decimals": 8,
+      "displayDecimals": 2,
+      "settles": true,
+      "assetType": "Crypto",
+      "sourceId": 3,
+      "metadata": {
+        "currencyName": "Render Token",
+        "marketCapRank": 38,
+        "mint": "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
+        "snapshotPrice": 9.5,
+        "supply": 381860659.292815,
+        "totalSupply": "39121399.00891889"
+      },
+      "status": 1
+    },
+    {
+      "assetId": 10,
+      "symbol": "HNT",
+      "decimals": 8,
+      "displayDecimals": 2,
+      "settles": true,
+      "assetType": "Crypto",
+      "sourceId": 3,
+      "metadata": {
+        "currencyName": "Helium",
+        "marketCapRank": 118,
+        "mint": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
+        "snapshotPrice": 5.56,
+        "supply": 163223905.052253,
+        "totalSupply": "163223903.25812936"
+      },
+      "status": 1
+    },
+    {
+      "assetId": 11,
+      "symbol": "PYTH",
+      "decimals": 6,
+      "displayDecimals": 2,
+      "settles": true,
+      "assetType": "Crypto",
+      "sourceId": 3,
+      "metadata": {
+        "currencyName": "Pyth Network",
+        "marketCapRank": 89,
+        "mint": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+        "snapshotPrice": 0.880606,
+        "supply": 1500000000,
+        "totalSupply": "9999989197.869976"
+      },
+      "status": 1
+    },
+    {
+      "assetId": 12,
+      "symbol": "GMT",
+      "decimals": 9,
+      "displayDecimals": 2,
+      "settles": true,
+      "assetType": "Crypto",
+      "sourceId": 3,
+      "metadata": {
+        "currencyName": "GMT",
+        "marketCapRank": 167,
+        "mint": "7i5KKsX2weiTkry7jA4ZwSuXGhs5eJBEjY8vVxR4pfRx",
+        "snapshotPrice": 0.304553,
+        "supply": 1854226838.01081,
+        "totalSupply": "2104509126.2157993"
+      },
+      "status": 1
+    }
+  ],
+  "markets": [
+    {
+      "marketId": 100004,
+      "symbol": "BTCUSDC",
+      "baseAssetId": 1,
+      "baseLotSize": "1000",
+      "quoteAssetId": 7,
+      "quoteLotSize": "1",
+      "priceDisplayDecimals": 2,
+      "protectionPriceLevels": 3000,
+      "priceBandBidPct": 25,
+      "priceBandAskPct": 400,
+      "priceTickSize": "0.1",
+      "quantityTickSize": "0.00001",
+      "feeTableId": 3,
+      "status": 1,
+      "displayRank": 1,
+      "listedAt": "2023-10-29T00:00:00Z",
+      "isPrimary": true
+    },
+    {
+      "marketId": 100005,
+      "symbol": "ETHUSDC",
+      "baseAssetId": 2,
+      "baseLotSize": "1000000000000000",
+      "quoteAssetId": 7,
+      "quoteLotSize": "10",
+      "priceDisplayDecimals": 2,
+      "protectionPriceLevels": 5000,
+      "priceBandBidPct": 25,
+      "priceBandAskPct": 400,
+      "priceTickSize": "0.01",
+      "quantityTickSize": "0.001",
+      "feeTableId": 3,
+      "status": 3,
+      "displayRank": 2,
+      "listedAt": "2023-10-29T00:00:00Z"
+    },
+    {
+      "marketId": 100006,
+      "symbol": "SOLUSDC",
+      "baseAssetId": 5,
+      "baseLotSize": "10000000",
+      "quoteAssetId": 7,
+      "quoteLotSize": "100",
+      "priceDisplayDecimals": 2,
+      "protectionPriceLevels": 1000,
+      "priceBandBidPct": 25,
+      "priceBandAskPct": 400,
+      "priceTickSize": "0.01",
+      "quantityTickSize": "0.01",
+      "feeTableId": 3,
+      "status": 3,
+      "displayRank": 3,
+      "listedAt": "2023-10-29T00:00:00Z"
+    },
+    {
+      "marketId": 100007,
+      "symbol": "BONKUSDC",
+      "baseAssetId": 8,
+      "baseLotSize": "10000000",
+      "quoteAssetId": 7,
+      "quoteLotSize": "1",
+      "priceDisplayDecimals": 8,
+      "protectionPriceLevels": 500,
+      "priceBandBidPct": 25,
+      "priceBandAskPct": 400,
+      "priceTickSize": "0.00000001",
+      "quantityTickSize": "100",
+      "feeTableId": 3,
+      "status": 1,
+      "displayRank": 9,
+      "listedAt": "2023-12-15T00:00:00Z",
+      "isPrimary": true
+    },
+    {
+      "marketId": 100008,
+      "symbol": "RENDERUSDC",
+      "baseAssetId": 9,
+      "baseLotSize": "1000000",
+      "quoteAssetId": 7,
+      "quoteLotSize": "1",
+      "priceDisplayDecimals": 3,
+      "protectionPriceLevels": 5000,
+      "priceBandBidPct": 25,
+      "priceBandAskPct": 400,
+      "priceTickSize": "0.0001",
+      "quantityTickSize": "0.01",
+      "feeTableId": 3,
+      "status": 1,
+      "displayRank": 11,
+      "listedAt": "2023-12-20T00:00:00Z",
+      "isPrimary": true
+    },
+    {
+      "marketId": 100009,
+      "symbol": "HNTUSDC",
+      "baseAssetId": 10,
+      "baseLotSize": "1000000",
+      "quoteAssetId": 7,
+      "quoteLotSize": "1",
+      "priceDisplayDecimals": 3,
+      "protectionPriceLevels": 10000,
+      "priceBandBidPct": 25,
+      "priceBandAskPct": 400,
+      "priceTickSize": "0.0001",
+      "quantityTickSize": "0.01",
+      "feeTableId": 3,
+      "status": 1,
+      "displayRank": 12,
+      "listedAt": "2023-12-21T00:00:00Z",
+      "isPrimary": true
+    },
+    {
+      "marketId": 100013,
+      "symbol": "EURCUSDC",
+      "baseAssetId": 13,
+      "baseLotSize": "10000",
+      "quoteAssetId": 7,
+      "quoteLotSize": "1",
+      "priceDisplayDecimals": 6,
+      "protectionPriceLevels": 1000,
+      "priceBandBidPct": 25,
+      "priceBandAskPct": 400,
+      "priceTickSize": "0.0001",
+      "quantityTickSize": "0.01",
+      "feeTableId": 3,
+      "status": 1,
+      "displayRank": 10,
+      "listedAt": "2023-12-18T00:00:00Z",
+      "isPrimary": true
+    },
+    {
+      "marketId": 100014,
+      "symbol": "HONEYUSDC",
+      "baseAssetId": 14,
+      "baseLotSize": "10000000",
+      "quoteAssetId": 7,
+      "quoteLotSize": "1",
+      "priceDisplayDecimals": 4,
+      "protectionPriceLevels": 750,
+      "priceBandBidPct": 25,
+      "priceBandAskPct": 400,
+      "priceTickSize": "0.0001",
+      "quantityTickSize": "0.01",
+      "feeTableId": 3,
+      "status": 1,
+      "displayRank": 13,
+      "listedAt": "2023-12-22T00:00:00Z",
+      "isPrimary": true
+    },
+    {
+      "marketId": 100015,
+      "symbol": "MOBILEUSDC",
+      "baseAssetId": 15,
+      "baseLotSize": "1000000",
+      "quoteAssetId": 7,
+      "quoteLotSize": "1",
+      "priceDisplayDecimals": 6,
+      "protectionPriceLevels": 500,
+      "priceBandBidPct": 25,
+      "priceBandAskPct": 400,
+      "priceTickSize": "0.000001",
+      "quantityTickSize": "1",
+      "feeTableId": 3,
+      "status": 1,
+      "displayRank": 14,
+      "listedAt": "2023-12-27T00:00:00Z",
+      "isPrimary": true
+    },
+    {
+      "marketId": 100016,
+      "symbol": "JTOUSDC",
+      "baseAssetId": 16,
+      "baseLotSize": "10000000",
+      "quoteAssetId": 7,
+      "quoteLotSize": "1",
+      "priceDisplayDecimals": 3,
+      "protectionPriceLevels": 5000,
+      "priceBandBidPct": 25,
+      "priceBandAskPct": 400,
+      "priceTickSize": "0.0001",
+      "quantityTickSize": "0.01",
+      "feeTableId": 3,
+      "status": 1,
+      "displayRank": 16,
+      "listedAt": "2023-12-29T00:00:00Z",
+      "isPrimary": true
+    }
+  ],
+  "sources": [
+    { "sourceId": 0, "name": "fiat", "metadata": {} },
+    {
+      "sourceId": 1,
+      "name": "bitcoin",
+      "transactionExplorer": "https://mempool.space/tx/{}",
+      "addressExplorer": "https://mempool.space/address/{}",
+      "metadata": {
+        "network": "Mainnet",
+        "scope": "bitcoin",
+        "type": "mainnet"
+      }
+    },
+    {
+      "sourceId": 2,
+      "name": "ethereum",
+      "transactionExplorer": "https://etherscan.io/tx/{}",
+      "addressExplorer": "https://etherscan.io/address/{}",
+      "metadata": { "chainId": 1, "scope": "ethereum", "type": "mainnet" }
+    },
+    {
+      "sourceId": 3,
+      "name": "solana",
+      "transactionExplorer": "https://explorer.solana.com/tx/{}",
+      "addressExplorer": "https://explorer.solana.com/address/{}",
+      "metadata": {
+        "chainId": "solana:mainnet",
+        "scope": "solana",
+        "type": "mainnet"
+      }
+    },
+    {
+      "sourceId": 5,
+      "name": "dogecoin",
+      "transactionExplorer": "https://sochain.com/tx/DOGE/{}",
+      "addressExplorer": "https://sochain.com/address/DOGE/{}",
+      "metadata": {
+        "network": "Mainnet",
+        "scope": "dogecoin",
+        "type": "mainnet"
+      }
+    },
+    {
+      "sourceId": 6,
+      "name": "bittensor",
+      "transactionExplorer": "https://x.taostats.io/extrinsic/{}",
+      "addressExplorer": "https://x.taostats.io/account/{}",
+      "metadata": { "scope": "bittensor", "type": "mainnet" }
+    },
+    {
+      "sourceId": 7,
+      "name": "litecoin",
+      "transactionExplorer": "https://litecoinspace.org/tx/{}",
+      "addressExplorer": "https://litecoinspace.org/address/{}",
+      "metadata": {
+        "network": "Mainnet",
+        "scope": "litecoin",
+        "type": "mainnet"
+      }
+    },
+    {
+      "sourceId": 101,
+      "name": "bitcoin-testnet",
+      "transactionExplorer": "https://mempool.space/testnet/tx/{}",
+      "addressExplorer": "https://mempool.space/testnet/address/{}",
+      "metadata": {
+        "network": "Testnet",
+        "scope": "bitcoin",
+        "type": "testnet"
+      }
+    },
+    {
+      "sourceId": 102,
+      "name": "ethereum-goerli",
+      "transactionExplorer": "https://goerli.etherscan.io/tx/{}",
+      "addressExplorer": "https://goerli.etherscan.io/address/{}",
+      "metadata": { "chainId": 5, "scope": "ethereum", "type": "testnet" }
+    }
+  ],
+  "feeTables": [
+    {
+      "feeTableId": 1,
+      "feeTiers": [{ "priority": 0, "makerFeeRatio": 0, "takerFeeRatio": 0 }]
+    },
+    {
+      "feeTableId": 2,
+      "feeTiers": [
+        { "priority": 0, "makerFeeRatio": 0.0004, "takerFeeRatio": 0.0008 }
+      ]
+    },
+    {
+      "feeTableId": 3,
+      "feeTiers": [
+        { "priority": 0, "makerFeeRatio": 0.0006, "takerFeeRatio": 0.0012 }
+      ]
+    }
+  ]
+}

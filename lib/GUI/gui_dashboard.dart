@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:tab_container/tab_container.dart';
 import 'package:vn_rust_hackathon/Business/business_dashboard.dart';
 import 'package:vn_rust_hackathon/GUI/GUIComponents/GUIDashboard/gui_dashboard_notifier.dart';
+import 'package:vn_rust_hackathon/GUI/GUIComponents/GUIDashboard/gui_histogram.dart';
 import 'package:vn_rust_hackathon/GUI/GUIComponents/GUIDashboard/gui_record.dart';
 
 class GUIDashboard extends StatefulWidget {

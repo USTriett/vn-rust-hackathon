@@ -157,8 +157,9 @@ class _GUIMatamaskScreenState extends State<GUIMatamaskScreen> {
                                     ),
                                     const SizedBox(height: 16),
                                     ElevatedButton(
-                                      onPressed: () => {},
-                                      // loginUsingMetamask(context),
+                                      onPressed: () {
+                                        loginUsingMetamask(context);
+                                      },
                                       child: Text(
                                         'Connect Wallet',
                                       ),
