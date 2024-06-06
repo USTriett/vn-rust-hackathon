@@ -81,9 +81,9 @@ class _GUIDashboardState extends State<GUIDashboard>
               fontSize: 13.0,
             ),
             colors: [
-              Color.fromARGB(50, 135, 135, 231),
-              Color.fromARGB(50, 231, 135, 135),
-              Color.fromARGB(50, 135, 231, 135),
+              Color.fromARGB(40, 135, 135, 231),
+              Color.fromARGB(40, 231, 135, 135),
+              Color.fromARGB(40, 135, 231, 135),
             ],
             tabs: [
               Text(BusinessDashboard.GetHeader(0)),
