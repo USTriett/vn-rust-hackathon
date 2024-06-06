@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vn_rust_hackathon/GUI/gui_dashboard.dart';
 import 'package:vn_rust_hackathon/GUI/gui_metamask_login_screen.dart';
 
 void main() {
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: MatamaskScreen(),
+      home: const GUIDashboard(),
     );
   }
 }
