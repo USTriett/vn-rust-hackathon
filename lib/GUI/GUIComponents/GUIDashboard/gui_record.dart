@@ -32,6 +32,7 @@ class _GUIDashboardRecordState extends State<GUIDashboardRecord> {
                 builder: (context) => TradeView(
                       index: 0,
                       symbol: BSDashboard.GetCoinType(index, tab),
+                      currentPrice: BSDashboard.GetAmountUSD(index, tab),
                     ))),
       },
       child: Container(
