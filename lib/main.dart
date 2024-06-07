@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
+import 'package:vn_rust_hackathon/Data/data_wallet.dart';
 import 'package:vn_rust_hackathon/GUI/GUIComponents/GUIDashboard/gui_dashboard_notifier.dart';
 
 import 'package:vn_rust_hackathon/GUI/GUIDashBoard/gui_dashboard.dart';
 
-import 'package:vn_rust_hackathon/GUI/GUIComponents/gui_navigation_bar.dart';
+import 'package:vn_rust_hackathon/GUI/gui_navigation_bar.dart';
 import 'package:vn_rust_hackathon/GUI/GUIHistory/gui_history_notifier.dart';
 import 'package:vn_rust_hackathon/GUI/gui_metamask_login_screen.dart';
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (context) => AllCoinModel()),
         ChangeNotifierProvider(create: (context) => HotCoinModel()),
         ChangeNotifierProvider(create: (context) => NewCoinModel()),
+        ChangeNotifierProvider(create: (context) => WalletModel())
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

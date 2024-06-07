@@ -10,7 +10,7 @@ class DataHistory {
     String jsonData = '''
     [
       {
-        "name": "Deposit 1",
+        "name": "BTC",
         "cash": 100.0,
         "token": 50.0,
         "type": "deposit",
@@ -19,7 +19,7 @@ class DataHistory {
         "balance": 150.0
       },
       {
-        "name": "Withdrawal 1",
+        "name": "BTC",
         "cash": 200.0,
         "token": 100.0,
         "type": "withdraw",
@@ -28,7 +28,7 @@ class DataHistory {
         "balance": 300.0
       },
       {
-        "name": "Deposit 2",
+        "name": "BTC",
         "cash": 300.0,
         "token": 150.0,
         "type": "deposit",
@@ -37,7 +37,7 @@ class DataHistory {
         "balance": 450.0
       },
       {
-        "name": "Withdrawal 2",
+        "name": "ETH",
         "cash": 400.0,
         "token": 200.0,
         "type": "withdraw",
@@ -46,7 +46,7 @@ class DataHistory {
         "balance": 600.0
       },
       {
-        "name": "Deposit 2",
+        "name": "ETH",
         "cash": 300.0,
         "token": 150.0,
         "type": "deposit",
@@ -55,7 +55,7 @@ class DataHistory {
         "balance": 450.0
       },
       {
-        "name": "Withdrawal 2",
+        "name": "ETH",
         "cash": 400.0,
         "token": 200.0,
         "type": "withdraw",
@@ -64,7 +64,7 @@ class DataHistory {
         "balance": 600.0
       },
       {
-        "name": "Deposit 2",
+        "name": "ETH",
         "cash": 300.0,
         "token": 150.0,
         "type": "deposit",
@@ -73,7 +73,7 @@ class DataHistory {
         "balance": 450.0
       },
       {
-        "name": "Withdrawal 2",
+        "name": "ETH",
         "cash": 400.0,
         "token": 200.0,
         "type": "withdraw",

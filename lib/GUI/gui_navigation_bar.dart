@@ -9,6 +9,7 @@ import 'package:vn_rust_hackathon/GUI/GUIHistory/gui_history.dart';
 
 import 'package:vn_rust_hackathon/GUI/GUIDashBoard/gui_dashboard.dart';
 import 'package:vn_rust_hackathon/GUI/gui_metamask_login_screen.dart';
+import 'package:vn_rust_hackathon/GUI/gui_wallet.dart';
 
 class CustomIcons {
   static const _kFontFam = 'CustomIcons';
@@ -129,8 +130,7 @@ class NavigationBarState extends State<GUINavigationBar>
         children: <Widget>[
           GUIMatamaskScreen(
               title: "Account Page", controller: _motionTabBarController!),
-          MainPageContentComponent(
-              title: "Profile Page", controller: _motionTabBarController!),
+          WalletView(controller: _motionTabBarController!),
           GUIDashboard(
               title: "Dashboard Page", controller: _motionTabBarController!),
           MainPageContentComponent(

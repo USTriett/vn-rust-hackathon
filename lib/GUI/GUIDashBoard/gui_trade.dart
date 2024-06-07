@@ -48,11 +48,11 @@ class _TradeViewState extends State<TradeView> with TickerProviderStateMixin {
             backgroundColor: Colors.transparent,
             body: SingleChildScrollView(
               child: StreamBuilder(
-                  stream: DataMarket.UpdateMarketData(5),
+                  stream: DataMarket.UpdateMarketData(2),
                   builder: (context, AsyncSnapshot marketSnapshot) {
                     return StreamBuilder(
                         stream: DataCandle.UpdateCandle(
-                            widget.symbol, widget.initialData, 5),
+                            widget.symbol, widget.initialData, 2),
                         builder: (context, AsyncSnapshot tradeSnapshot) {
                           if (marketSnapshot.hasData && tradeSnapshot.hasData) {
                             List<Market> market = marketSnapshot.data;

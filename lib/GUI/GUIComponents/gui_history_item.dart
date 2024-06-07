@@ -22,15 +22,28 @@ class HistoryItem extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    // deposite (name)
-                    item.name,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 135, 135, 231),
-                      // Color.fromARGB(255, 255, 255, 255),
-                    ),
+                  Row(
+                    children: [
+                      Text(
+                        // deposite (name)
+                        item.name,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 135, 135, 231),
+                          // Color.fromARGB(255, 255, 255, 255),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Image.asset(
+                        "assets/images/cryptocurrency.png",
+                        color: Colors.white,
+                        width: 20,
+                        height: 20,
+                      )
+                    ],
                   ),
                   Container(
                     padding: EdgeInsets.all(7),
