@@ -7,7 +7,7 @@ import 'package:motion_tab_bar/MotionTabBarController.dart';
 
 import 'package:vn_rust_hackathon/GUI/GUIHistory/gui_history.dart';
 
-import 'package:vn_rust_hackathon/GUI/gui_dashboard.dart';
+import 'package:vn_rust_hackathon/GUI/GUIDashBoard/gui_dashboard.dart';
 import 'package:vn_rust_hackathon/GUI/gui_metamask_login_screen.dart';
 
 class CustomIcons {
